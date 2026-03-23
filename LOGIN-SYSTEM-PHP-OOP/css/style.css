@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #121212; /* dark background */
+    color: #f0f0f0;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #1f1f1f; /* dark masculine navbar */
+    border-bottom: 3px solid #ff4500; /* bold accent */
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#menu-main{
+    display: flex;
+    list-style: none;
+    color: #f0f0f0;
+}
+
+.menu-member{
+    list-style: none;
+}
+
+.topnav a{
+    color: #f0f0f0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.topnav a:hover {
+    background-color: #333333;
+    color: #ff4500;
+}
+
+.topnav a.active {
+    background-color: #ff4500;
+    color: white;
+}
+
+/* Banner */
+.banner{
+    background-image: url(../assets/Titan.jpg); /* updated to Titan.jpg */
+    background-size: cover;        /* makes it fill the container */
+    background-repeat: no-repeat;  /* prevents tiling */
+    background-position: center;   /* centers the image */
+    height: 20em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3em;
+    position: relative;            /* for overlay if needed */
+}
+
+/* Optional: dark overlay for text readability */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* subtle dark overlay */
+}
+
+.bheading{
+    font-size: 4em;
+    font-weight: bold;
+    color: #ff4500; /* strong accent */
+    text-align: left;
+    margin: 0;
+    padding-left: 1em;
+}
+
+/* Login/Signup */
+.index-login{
+    margin: 3em 5em;
+}
+
+.wrapper{
+    display: flex;
+    text-align: left;
+    justify-content: space-evenly;
+    gap: 2em;
+}
+
+.index-login-login,
+.index-login-signup{
+    background-color: #1f1f1f; /* dark panel */
+    padding: 2em;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    flex: 1;
+    max-width: 400px;
+}
+
+.index-login-signup{
+    border-left: 4px solid #ff4500; /* bold accent */
+    padding-left: 2em;
+}
+
+.index-login-login input,
+.index-login-signup input{
+    color: #f0f0f0;
+    background-color: #333333;
+    margin-bottom: 0.8em;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    width: 100%;
+}
+
+button{
+    background-color: #ff4500;
+    margin-bottom: 0.8em;
+    border-radius: 5px;
+    color: white;
+    border: none; 
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #e03e00;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px){
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .index-login-login,
+    .index-login-signup{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
