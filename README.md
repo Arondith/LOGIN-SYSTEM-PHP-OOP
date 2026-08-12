@@ -1,6 +1,8 @@
 # PHP OOP Login System
 
-A PHP-based authentication project organized around object-oriented programming concepts. The application includes login-related pages, password reset functionality, reusable classes, supporting assets, and local development instructions.
+## About
+
+A PHP authentication project built around object-oriented programming concepts. It demonstrates reusable PHP classes, login and password-reset flows, shared application components, and local PHP/MySQL development practices.
 
 ## Project location
 
