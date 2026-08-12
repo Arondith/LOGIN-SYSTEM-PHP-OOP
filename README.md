@@ -2,7 +2,24 @@
 
 ## About
 
-A PHP authentication project built around object-oriented programming concepts. It demonstrates reusable PHP classes, login and password-reset flows, shared application components, and local PHP/MySQL development practices.
+A PHP and MySQL authentication system built using **object-oriented programming (OOP)** principles. The project demonstrates a complete user-authentication flow with a **landing page, registration, login, logout, authenticated home page, session handling, password reset, form validation, and database-backed user accounts**. Passwords are protected using **salted/hashed storage instead of plain-text credentials**, while reusable PHP classes separate database access, authentication logic, validation, and application behavior.
+
+The project was created as a hands-on implementation of secure login-system fundamentals, showing how a front-end authentication interface connects to PHP classes and a MySQL database while maintaining user sessions and handling common authentication errors.
+
+## Core features
+
+- User registration / signup
+- Login page and authenticated landing/home page
+- Logout functionality
+- MySQL database-backed user accounts
+- Salted / hashed password storage
+- Session creation and persistence after authentication
+- Password-reset flow
+- Form and credential validation
+- Error handling for authentication and database operations
+- Reusable PHP classes following OOP structure
+- Shared configuration and application includes
+- Responsive front-end assets and styling
 
 ## Project location
 
@@ -22,6 +39,15 @@ Main areas include:
 A more detailed project README is available inside the application folder:
 
 `LOGIN-SYSTEM-PHP-OOP/README.md`
+
+## Technology
+
+- PHP
+- MySQL
+- HTML / CSS
+- Object-Oriented Programming
+- Sessions and authentication
+- Password hashing / salting
 
 ## Running locally
 
