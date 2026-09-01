@@ -1,87 +1,102 @@
-# Login-and-Register-system-using-OOP
+# Login and Register System Using OOP PHP
 
-Login and Register system created using OOP PHP. An object oriented authentication system gives a user the ability to register，log in, logout and includes features like validation, session saving, salt-hash-encrypted passwords, error handlers.
+A PHP and MySQL authentication project built with object-oriented programming. It demonstrates user registration, login, logout, form validation, session handling, password hashing/salting, and reusable PHP classes.
 
-
-### Tech Stack <a name="tech-stack"></a>
+## Tech Stack
 
 - PHP
-- MySql
-- Css
+- MySQL
+- HTML / CSS
+- PDO
+- XAMPP or another PHP/MySQL local development environment
 
-### Key Features <a name="key-features"></a>
+## Key Features
 
-#### Homepage with
-- **[Login]**
-- **[Logout]**
-- **[Signup]**
+- User signup and registration
+- User login and logout
+- Session-based authentication
+- Form and credential validation
+- Password hashing / salting
+- Database-backed user accounts
+- Reusable OOP PHP classes
+- Error handling for authentication and database operations
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo 
-![php login](https://user-images.githubusercontent.com/106079814/221407466-30dd6fc7-de31-4b1f-837f-23a102c354bc.jpg)
-
-
-
-<!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
+## Getting Started
 
 ### Prerequisites
 
-In order to run this project you need:
+Install a local PHP/MySQL environment such as XAMPP. Make sure Apache and MySQL are available before running the application.
 
-- Basic OOP PHP
-- PHP form validation
-- PHP error handling
-- MySql
-- Xampp
+### Clone the repository
 
-
-### Setup
-
-Clone this repository to your desired folder:
-
-- https://github.com/NATASHA-ct/LOGIN-SYSTEM-PHP-OOP.git
-
- - You can download this OOP login and Register system as a ZIP and enter your database details in the dbh.classes.php file.
- 
-```
- protected function connect(){
-        // error handling
-        try {
-            $username = "USERNAME GOES HERE";
-            $password = "PASSWORD GOES HERE";
-            $dbh = new PDO('mysql:host=HOST NAME GOES HERE;dbname=DATABASE NAME GOES HERE', $username, $password);
-            return $dbh;
-        } catch (PDOExceotion $e) {
-            print "Error! ". $e->getMessage()."<br/>";
-            die();
-        }
-  
+```bash
+git clone https://github.com/Arondith/LOGIN-SYSTEM-PHP-OOP.git
+cd LOGIN-SYSTEM-PHP-OOP/LOGIN-SYSTEM-PHP-OOP
 ```
 
-## 👥 Author
-👤 **NATASHA TATENDA CHIROMBE**
+You can also download the repository as a ZIP file from GitHub.
 
-- GitHub: [@NATASHA-ct]((https://github.com/NATASHA-ct)
-- Twitter: [@NatashaChirombe]
-- LinkedIn: [Natasha Chirombe](linkedin.com/in/natasha-chirombe-1531aa17b)
+### Configure the database connection
 
-<!-- ACKNOWLEDGEMENTS -->
+Open the database handler class and replace the placeholder connection values with your local MySQL credentials and database name.
 
-## 🙏 Acknowledgments <a name="acknowledgements">
-Dani Krossing(Tutor)
-</a>
+Example PDO connection:
 
-<!-- LICENSE -->
+```php
+protected function connect()
+{
+    try {
+        $username = "YOUR_USERNAME";
+        $password = "YOUR_PASSWORD";
+        $dbh = new PDO(
+            'mysql:host=YOUR_HOST;dbname=YOUR_DATABASE',
+            $username,
+            $password
+        );
 
-## 📝 License <a name="license"></a>
+        return $dbh;
+    } catch (PDOException $e) {
+        print "Error! " . $e->getMessage() . "<br/>";
+        die();
+    }
+}
+```
 
-This project is [MIT](./LICENSE) licensed.
+> For local development, `YOUR_HOST` is commonly `localhost`. Do not commit real production credentials to the repository.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+### Run with XAMPP
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. Copy or clone the repository into your XAMPP `htdocs` directory.
+2. Start Apache and MySQL from the XAMPP Control Panel.
+3. Configure the database connection used by the project.
+4. Import or create the required database structure for the application.
+5. Open the project in your browser through `http://localhost/` using the folder path where you placed the application.
+
+## Project Structure
+
+Important areas of the application include:
+
+- `index.php` — main application entry point
+- `home.php` — authenticated home page
+- `reset_password.php` — password reset flow
+- `classes/` — reusable OOP PHP classes
+- `includes/` — shared application includes and configuration
+- `assets/` and `css/` — front-end resources and styling
+
+## Security Notes
+
+This project is intended for learning and portfolio use. Before deploying it publicly, review database credentials, session configuration, password-reset behavior, error output, mail settings, and other environment-specific configuration.
+
+## Original Author
+
+**Natasha Tatenda Chirombe**
+
+- GitHub: [@NATASHA-ct](https://github.com/NATASHA-ct)
+
+## Acknowledgments
+
+- Dani Krossing — tutorial/instruction reference
+
+## License
+
+See the repository files for applicable licensing information.
