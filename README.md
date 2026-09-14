@@ -57,6 +57,20 @@ A more detailed project README is available inside the application folder:
 4. Review the project configuration and database settings under the application folder.
 5. Open the project through `http://localhost/` in your browser.
 
+## Local development checklist
+
+Before testing authentication changes, verify that:
+
+- Apache and MySQL are running.
+- The configured database exists and the application can connect to it.
+- Registration creates a user record without storing a plain-text password.
+- Valid credentials create an authenticated session and reach the protected home page.
+- Invalid credentials display an error without exposing database or stack details.
+- Logout clears the authenticated session and protected pages are no longer accessible.
+- Password-reset changes are tested with non-production accounts and settings.
+
+This checklist helps catch common regressions when modifying authentication, session, validation, or database code.
+
 ## Notes
 
 This is an academic/software project. Review database credentials, mail settings, and environment-specific configuration before using it outside a local development environment.
