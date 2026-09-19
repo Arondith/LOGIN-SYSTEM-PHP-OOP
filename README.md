@@ -1,5 +1,9 @@
 # PHP OOP Login System
 
+## Project Preview
+
+![TITAN PHP OOP Login System preview](https://d2jqrm6oza8nb6.cloudfront.net/datasets/d090341f-d683-422b-be44-f5ed47201907.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjE0YTQzMTFjNzY4ZDFmOCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc4OTkzNjc4NX0.kE6H9AqWDp0bFZK4IL0t0V3pgcmZLjimzVnpG8WL2FE)
+
 ## About
 
 A PHP and MySQL authentication system built using **object-oriented programming (OOP)** principles. The project demonstrates a complete user-authentication flow with a **landing page, registration, login, logout, authenticated home page, session handling, password reset, form validation, and database-backed user accounts**. Passwords are protected using **salted/hashed storage instead of plain-text credentials**, while reusable PHP classes separate database access, authentication logic, validation, and application behavior.
